@@ -9,13 +9,15 @@
   </head>
   <body onload="findIcon()">
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      intent="WELCOME"
-      chat-title="moAI"
-      chat-icon="https://github.com/LUXROBO/pymodi/blob/gh-pages/assets/img/chat-icon.png?raw=true" 
-      agent-id="6b76e78f-38df-476b-b4fb-12d7b80eff71"
-      language-code="ko"
-    ></df-messenger>
+    <div class="test">
+      <df-messenger
+        intent="WELCOME"
+        chat-title="moAI"
+        chat-icon="https://github.com/LUXROBO/pymodi/blob/gh-pages/assets/img/chat-icon.png?raw=true" 
+        agent-id="6b76e78f-38df-476b-b4fb-12d7b80eff71"
+        language-code="ko"
+      ></df-messenger>
+    </div>
     <style>
       df-messenger {
         --df-messenger-bot-message: #f7fbff;
@@ -25,11 +27,17 @@
         --df-messenger-send-icon: #0c8ced;
         --df-messenger-user-message: #d8d8d8;
       }
-      widgetIcon {
+      #widgetIcon {
           position: absolute;
           bottom: 51px;
           right: -3px;
           }
+
+      .test {
+        position: absolute;
+        bottom: 30px;
+        right: 50px;
+      }
     </style>
     <script type="text/javascript">
       function findIcon () {
