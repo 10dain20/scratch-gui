@@ -7,7 +7,7 @@
     <link rel="shortcut icon" href="static/favicon.ico">
     <title>Scratch 3.0 GUI</title>
   </head>
-  <body>
+  <body onload="findIcon()">
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
     <df-messenger
       intent="WELCOME"
@@ -26,10 +26,12 @@
         --df-messenger-user-message: #d8d8d8;
       }
 
-      #widgetIcon {
-        position: absolute;
-        top: -68px;
-      }
     </style>
+    <script type="text/javascript">
+      function findIcon () {
+
+        window.console.log("widgetIcon", document.querySelector("#widgetIcon"));
+      }
+    </script>
     <script type="text/javascript" src="lib.min.js"></script><script type="text/javascript" src="chunks/gui.js"></script>
   </body>
