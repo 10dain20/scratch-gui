@@ -7,17 +7,16 @@
     <link rel="shortcut icon" href="static/favicon.ico">
     <title>Scratch 3.0 GUI</title>
   </head>
-  <body onload="findIcon()">
+  <body>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <div class="test">
       <df-messenger
+        id="messenger"
         intent="WELCOME"
         chat-title="moAI"
         chat-icon="https://github.com/LUXROBO/pymodi/blob/gh-pages/assets/img/chat-icon.png?raw=true" 
         agent-id="6b76e78f-38df-476b-b4fb-12d7b80eff71"
         language-code="ko"
       ></df-messenger>
-    </div>
     <style>
       df-messenger {
         --df-messenger-bot-message: #f7fbff;
@@ -31,20 +30,6 @@
           position: absolute;
           bottom: 51px;
           right: -3px;
-          }
-
-      .test {
-        position: relative;
-        width: 500px;
-        height: 500px;
-        bottom: 30px;
-        right: 50px;
-      }
-
-      #widgetIcon {
-        position: absolute;
-          bottom: 51px !important;
-          right: -3px !important;
       }
     </style>
     <script type="text/javascript">
