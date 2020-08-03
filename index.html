@@ -18,6 +18,16 @@
         language-code="ko"
       ></df-messenger>
       <script type="text/javascript" src="script.js"></script>
+      <var> icon = document.querySelector('#widgetIcon')
+        icon.attachShadow({mode:'open'})
+        icon.shadowRoot.innerHTML='
+          <style>
+            :host{
+              position: absolute;
+              bottom: 51px;
+              right: -3px; 
+            }
+          </style>'</var>;
     <style>
       df-messenger {
         --df-messenger-bot-message: #f7fbff;
@@ -27,13 +37,12 @@
         --df-messenger-send-icon: #0c8ced;
         --df-messenger-user-message: #d8d8d8;
       }
-      #widgetIcon {
+      widgetIcon {
           position: absolute;
           bottom: 51px;
           right: -3px;
       }
     </style>
-    <script type="text/javascript">
       function findIcon () {
         setTimeout(window.console.log("widgetIcon", document.querySelector("#widgetIcon")),
         10000);
