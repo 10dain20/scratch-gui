@@ -12,8 +12,8 @@ dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
 	
 });
 
-document.removeEventListener('keydown');
-	document.removeEventListener('keyup');
+document.removeEventListener('keydown', this.handleKeydown);
+	document.removeEventListener('keyup', this.handleKeyUp);
 	console.log("event listener removed")
 
 // if (dfMessenger.style.display !== 'none') {
