@@ -8,8 +8,8 @@ dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
 	// console.log("event listener removed")
 	// window.console.log(dfMessenger.style.display)
 
-	const box = document.querySelector('df-messenger').shadowRoot.querySelector('df-messenger-chat').shadowRoot.querySelector('df-messenger-user-input').shadowRoot.querySelector('.input-box-wrapper').querySelector('input')
-	console.log(box);
+	const box = dfMessenger.shadowRoot.querySelector('df-messenger-chat').shadowRoot.querySelector('df-messenger-user-input').shadowRoot.querySelector('.input-box-wrapper').querySelector('input')
+	window.console.log(box + " is loadeded");
 	function dialogDelete(e) {
 		if (e.keyCode == 8){
 			box.value = box.value.substring(0, box.value.length - 1);
