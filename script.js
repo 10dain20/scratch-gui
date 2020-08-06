@@ -2,7 +2,7 @@ const dfMessenger = document.querySelector('df-messenger');
 // var marginsize = '520px'
 window.console.log(dfMessenger);
 
-dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
+dfMessenger.addEventListener('df-request-sent', function (event) {
 	// document.removeEventListener('keydown');
 	// document.removeEventListener('keyup');
 	// console.log("event listener removed")
@@ -15,6 +15,7 @@ dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
 			box.value = box.value.substring(0, box.value.length - 1);
 		}
 	}
+	box.removeEventListener('keydown', dialogDelete);
 	box.addEventListener('keydown', dialogDelete);
 	//wrapper.removeEventListener('keydown', 
 	//dfMessenger.shadowRoot.querySelector('.df-messenger-wrapper').setAttribute('style', 'margin-right: ' + marginsize);
