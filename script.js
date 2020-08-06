@@ -1,5 +1,6 @@
 const dfMessenger = document.querySelector('df-messenger');
 // var marginsize = '520px'
+window.console.log(dfMessenger);
 
 dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
 	// document.removeEventListener('keydown');
@@ -9,8 +10,8 @@ dfMessenger.addEventListener('dfMessengerLoaded', function (event) {
 
 	const box = document.querySelector('df-messenger').shadowRoot.querySelector('df-messenger-chat').shadowRoot.querySelector('df-messenger-user-input').shadowRoot.querySelector('.input-box-wrapper').querySelector('input')
 	console.log(box);
-	function dialogDelete(event) {
-		if (event.keyCode == 8){
+	function dialogDelete(e) {
+		if (e.keyCode == 8){
 			box.value = box.value.substring(0, box.value.length - 1);
 		}
 	}
