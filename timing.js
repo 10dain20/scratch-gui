@@ -1,0 +1,1 @@
+const tutorial=document.getElementsByClassName
