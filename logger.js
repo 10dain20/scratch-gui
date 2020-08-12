@@ -1,7 +1,7 @@
 
 console.log('hello');
 
-//mouse tracking 
+// log mouse x, y coordinates
 (function(){
   var mouse_log=" ";
 
@@ -21,16 +21,12 @@ console.log('hello');
   console.log(mouse_log);
 })();
 
-
-
-//tutorial log
-
-// var tutorial_log = []
-// const tutorial_play=document.getElementByClassName('w-big-play-button');
-
-// tutorial_play.addEventListener("click", function(event){
-//   function playedTimeStamp(e) { 
-//     var tutorial_played1 = e.timeStamp;
-//     tutorial_log.push(tutorial_played1)
-
-// console.log(tutorial_log);
+// log dragged blocks
+document.addEventListener('DOMContentLoaded', init, false);
+function init(){
+  function dragged () {
+    console.log('dragged');
+  }
+  var block = document.getElementsByClassName('blocklyDraggable');
+  block.addEventListener('drag', dragged, true);
+};
