@@ -1,32 +1,45 @@
 
-console.log('hello');
+// console.log('hello');
 
-// log mouse x, y coordinates
-(function(){
-  var mouse_log=" ";
+// // log mouse x, y coordinates
+// (function(){
+//   var mouse_log=" ";
 
-  $(document).mousemove(function(e) {
-    mouse_log += $.now() + " ";
-    mouse_log += e.pageX + " ";
-    mouse_log += e.pageY + " ";
-    mouse_log += "mousemove\n";
-  });
+//   $(document).mousemove(function(e) {
+//     mouse_log += $.now() + " ";
+//     mouse_log += e.pageX + " ";
+//     mouse_log += e.pageY + " ";
+//     mouse_log += "mousemove\n";
+//   });
 
-  $(document).click(function(e) {
-    mouse_log += $.now() + " ";
-    mouse_log += e.pageX + " ";
-    mouse_log += e.pageY + " ";
-    mouse_log += "mouseclick\n"; 
-  });
-  console.log(mouse_log);
-})();
+//   $(document).click(function(e) {
+//     mouse_log += $.now() + " ";
+//     mouse_log += e.pageX + " ";
+//     mouse_log += e.pageY + " ";
+//     mouse_log += "mouseclick\n"; 
+//   });
+//   console.log(mouse_log);
+// })();
 
-// log dragged blocks
-document.addEventListener('DOMContentLoaded', init, false);
+//log dragged blocks
 function init(){
-  function dragged () {
-    console.log('dragged');
+  console.log('ready');
+  var dragged = function() {
+    alert('clicked');
   }
-  var block = document.getElementsByClassName('blocklyDraggable');
-  block.addEventListener('drag', dragged, true);
+  var blocks = document.getElementsByClassName('blocklyDraggable');
+  for (var i=0; i<blocks.length; i++) {
+    console.log('block');
+    blocks[i].addEventListener('click', dragged, false);
+  }
 };
+
+// var blocks = document.getElementsByClassName('blocklyDraggable');
+// var dragged = function() {
+//   console.log('clicked');
+//   var attribute = this.getAttribute("data-id");
+//   console.log(attribute);
+// }
+// for (var i=0; i<blocks.length; i++) {
+//   blocks[i].addEventListener('click', dragged, true);
+// }
