@@ -8,7 +8,7 @@ import analytics from './analytics';
 
 /**
  * Get the tutorial id from the given numerical id (representing the
- * url id of the tutorial).
+ * url id of the ).
  * @param {number} urlId The URL Id for the tutorial
  * @returns {string} The string id for the tutorial, or null if the URL ID
  * was not found.
