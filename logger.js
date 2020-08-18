@@ -17,12 +17,12 @@
     mouse_log += "mouseclick\n"; 
   });
   
-  (function(){
-    var p = function(){
-      console.log(mouse_log);
-    };
-    window.setInterval(p,500)
-    p();
+  // (function(){
+  //   var p = function(){
+  //     console.log(mouse_log);
+  //   };
+  //   window.setInterval(p,500)
+  //   p();
   })();
 })();
 
